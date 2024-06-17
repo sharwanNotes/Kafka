@@ -1,0 +1,16 @@
+package com.happy.coding.config;
+
+import org.apache.kafka.clients.admin.NewTopic;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.config.TopicBuilder;
+
+@Configuration
+public class KafkaTopicConfig {
+
+	public NewTopic sharwanCreatedTopic() {
+		return TopicBuilder.name("sharwanTopic").build();
+	}
+	public NewTopic sharwanJsonCreatedTopic() {
+		return TopicBuilder.name("sharwanTopic_json").build();
+	}
+}

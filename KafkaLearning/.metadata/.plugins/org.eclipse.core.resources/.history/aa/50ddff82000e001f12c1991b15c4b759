@@ -1,0 +1,5 @@
+package com.happy.coding.controller;
+
+public class JsonMessageController {
+
+}

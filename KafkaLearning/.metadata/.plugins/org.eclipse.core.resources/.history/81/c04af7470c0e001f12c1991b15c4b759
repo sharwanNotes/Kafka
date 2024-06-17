@@ -1,0 +1,45 @@
+package com.happy.coding.controller;
+
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import com.happy.coding.controller.JsonMessageController;
+import com.happy.coding.kafka.JsonKafkaProducer;
+import com.happy.coding.payload.User;
+
+public class JsonMessageControllerTest {
+
+    @Mock
+    private JsonKafkaProducer jsonKafkaProducer;
+
+    @InjectMocks
+    private JsonMessageController jsonMessageController;
+
+    @BeforeEach
+    public void setUp() {
+        MockitoAnnotations.openMocks(this);
+    }
+
+    @Test
+    public void testPublish() {
+        // Given
+        User user = new User();
+
+        // When
+        ResponseEntity<String> responseEntity = jsonMessageController.publish(user);
+
+        // Then
+        verify(jsonKafkaProducer, times(1)).sendMessage(user);
+        assert responseEntity.getStatusCode().equals(HttpStatus.OK);
+        assert responseEntity.getBody().equals("Json message sent to kafka topic");
+    }
+}

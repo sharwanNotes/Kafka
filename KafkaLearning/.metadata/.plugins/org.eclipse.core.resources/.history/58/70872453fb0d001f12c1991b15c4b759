@@ -1,0 +1,5 @@
+package com.happy.coding.payload;
+
+public class User {
+
+}
