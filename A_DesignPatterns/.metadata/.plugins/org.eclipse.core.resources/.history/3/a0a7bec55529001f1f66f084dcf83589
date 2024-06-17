@@ -1,0 +1,16 @@
+package com.stg;
+
+public class RegularTransportFactory implements TransportFactory{
+
+	@Override
+	public Car createCar() {
+		 return new RegularCar();
+	}
+
+	@Override
+	public Bus createBus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

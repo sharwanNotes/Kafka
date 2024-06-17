@@ -1,0 +1,17 @@
+package com.stg;
+
+public class LuxuryTransportFactory implements TransportFactory {
+
+	@Override
+	public Car createCar() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Bus createBus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

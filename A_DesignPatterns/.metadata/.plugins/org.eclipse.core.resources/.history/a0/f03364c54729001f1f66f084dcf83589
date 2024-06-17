@@ -1,0 +1,11 @@
+package com.stg;
+
+public class Truck implements Vehicle {
+
+	@Override
+	public void drive() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

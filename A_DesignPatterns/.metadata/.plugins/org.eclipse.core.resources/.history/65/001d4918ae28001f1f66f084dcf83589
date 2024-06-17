@@ -1,0 +1,26 @@
+package com.stg;
+
+import java.lang.reflect.Constructor;
+
+public class ReflectionSingletonTest {
+
+    public static void main(String[] args) {
+        SingletonEnum instanceOne = SingletonEnum.INSTANCE;
+        SingletonEnum instanceTwo = null;
+
+        try {
+            Constructor[] constructors = SingletonEnum.class.getDeclaredConstructors();
+            for (Constructor constructor : constructors) {
+                // This code should ideally not break the singleton pattern for enums
+                constructor.setAccessible(true);
+                instanceTwo = (SingletonEnum) constructor.newInstance();
+                break;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(instanceOne);
+        System.out.println(instanceTwo);
+    }
+}

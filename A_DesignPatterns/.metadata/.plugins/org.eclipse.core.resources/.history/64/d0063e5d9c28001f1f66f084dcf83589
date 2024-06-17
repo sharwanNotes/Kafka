@@ -1,0 +1,13 @@
+package com.stg;
+
+public class EagerInitializedSingleton {
+	private static final EagerInitializedSingleton instance = new EagerInitializedSingleton();
+
+	public EagerInitializedSingleton() {
+	}
+
+	private static EagerInitializedSingleton getInstance() {
+		return instance;
+	}
+
+}

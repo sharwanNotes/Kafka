@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;SingletonEnum.java&apos; to &apos;SingletonPattern8/src/com.stg&apos;&#x0D;&#x0A;- Original project: &apos;SingletonPattern7&apos;&#x0D;&#x0A;- Destination element: &apos;SingletonPattern8/src/com.stg&apos;&#x0D;&#x0A;- Original element: &apos;com.stg.SingletonEnum.java&apos;" description="Copy compilation unit" destination="=SingletonPattern8/src&lt;com.stg" element1="/src&lt;com.stg{SingletonEnum.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1718191150820" units="1" version="1.0"/>
+</session>
