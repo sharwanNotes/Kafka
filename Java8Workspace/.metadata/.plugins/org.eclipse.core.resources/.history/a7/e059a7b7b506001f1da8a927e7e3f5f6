@@ -1,0 +1,9 @@
+package com.java.pkg;
+
+public class PrintEvenOddNumber {
+
+	public static void main(String[] args) {
+
+	}
+
+}

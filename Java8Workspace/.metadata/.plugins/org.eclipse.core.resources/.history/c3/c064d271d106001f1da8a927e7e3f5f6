@@ -1,0 +1,9 @@
+package com.java.pkg;
+
+public class FindMaximumAndMinimum {
+
+	public static void main(String[] args) {
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.java.pkg;
+
+public class FindSumOfFirst10Natural_Numbers {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
